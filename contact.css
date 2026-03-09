@@ -1,0 +1,170 @@
+/* =========================================================
+   CONTACT PAGE SPECIFIC STYLES
+   ========================================================= */
+
+/* --- 1. MAIN SECTION WITH GRID BG --- */
+.contact-page-section {
+  padding: 180px 0 100px; /* Top padding clears fixed header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--bg-dark);
+  /* Tech Grid Pattern */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center top;
+}
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- 2. LEFT SIDE: INFO --- */
+.info-box h2 {
+  font-size: 3.5rem;
+  color: var(--text-white);
+  margin-bottom: 25px;
+  font-family: "Inter", "Roboto", sans-serif;
+}
+
+.info-item {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+/* Glowing Icons */
+.info-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(10, 35, 57, 0.8); /* Dark Glass */
+  border: 1px solid var(--brand-yellow);
+  border-radius: 12px; /* Slight rounded square for tech look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-yellow);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  /* Strong Neon Glow */
+  box-shadow: 0 0 20px rgba(255, 216, 77, 0.3);
+  transition: 0.3s;
+}
+
+.info-item:hover .info-icon {
+  background: var(--brand-yellow);
+  color: #000;
+  box-shadow: 0 0 40px rgba(255, 216, 77, 0.6);
+  transform: scale(1.1);
+}
+
+.info-text h4 {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-family: "Inter", "Roboto", sans-serif;
+}
+
+.info-text p {
+  color: var(--text-grey);
+  line-height: 1.6;
+}
+
+/* --- 3. RIGHT SIDE: TECH FORM --- */
+.tech-form {
+  background: rgba(10, 35, 57, 0.6); /* Glass effect */
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  color: var(--brand-yellow);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  color: var(--text-white);
+  font-family: "Inter", "Roboto", sans-serif;
+  border-radius: 4px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+/* Dropdown styling */
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFD84D%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px auto;
+}
+
+select.form-input option {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+/* Focus Glow */
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--brand-yellow);
+  outline: none;
+  box-shadow: 0 0 20px rgba(255, 216, 77, 0.2); /* Input Glow */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- 4. MAP --- */
+.map-container {
+  margin-top: 80px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  filter: grayscale(100%) contrast(1.2) brightness(0.8); /* Dark Industrial Map */
+  transition: 0.5s;
+}
+
+.map-container:hover {
+  filter: grayscale(0%) contrast(1) brightness(1); /* Color on hover */
+  border-color: var(--brand-blue);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .info-box h2 {
+    font-size: 2.5rem;
+  }
+  .tech-form {
+    padding: 30px;
+  }
+}

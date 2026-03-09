@@ -1,0 +1,522 @@
+/* =========================================================
+   SERVICES PAGE SPECIFIC STYLES
+   ========================================================= */
+
+/* --- 1. PAGE HERO (Blended) --- */
+.page-hero {
+  height: 75vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(5, 20, 36, 0.6), rgba(5, 20, 36, 1)),
+    url("services-bg.png"); /* Ensure image path is correct */
+  background-size: cover;
+  background-position: center 50%;
+  z-index: -2;
+}
+
+.page-hero h1 {
+  font-size: 4rem;
+  color: var(--text-white);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUpSmooth 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.page-hero h1 span {
+  color: #ffd84d;
+  text-shadow:
+    0 0 10px rgba(255, 216, 77, 0.9),
+    0 0 30px rgba(255, 216, 77, 0.3);
+}
+
+.section-subtitle {
+  color: var(--brand-yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 216, 77, 0.5);
+  margin-bottom: 15px;
+  display: block;
+  opacity: 0;
+  animation: fadeInUpSmooth 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
+    forwards;
+}
+
+/* =========================================================
+   SHARED STYLES (Backgrounds & Grids)
+   ========================================================= */
+/* Shared Tech Grid Background for multiple sections */
+.services-list-section,
+.process-section,
+.supply-section {
+  padding: 120px 0;
+  background-color: var(--bg-dark);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center top;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.services-list-section {
+  overflow-x: hidden;
+}
+.process-section {
+  padding-bottom: 160px;
+  text-align: center;
+  z-index: 5;
+}
+.supply-section {
+  z-index: 4;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+@keyframes fadeInUpSmooth {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+@keyframes fadeInLeftSoft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRightSoft {
+  from {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.reveal.active {
+  animation-name: fadeInUpSmooth;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================================
+   2. SERVICES LIST (Rows)
+   ========================================================= */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 150px;
+  transform: none;
+}
+
+.service-row:last-child {
+  margin-bottom: 0;
+}
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Animation Triggers */
+.service-row.reveal.active {
+  animation-name: fadeInLeftSoft;
+}
+.service-row.reverse.reveal.active {
+  animation-name: fadeInRightSoft;
+}
+
+/* Text Content */
+.service-text-block {
+  flex: 1;
+}
+
+.service-text-block h3 {
+  font-size: 2.5rem;
+  color: var(--text-white);
+  margin-bottom: 25px;
+  font-family: "Inter", "Roboto", sans-serif;
+  position: relative;
+}
+
+.service-text-block p {
+  color: var(--text-grey);
+  font-family: "Inter", "Roboto", sans-serif;
+  align-items: justify !important;
+}
+
+/* --- ADDED: Horizontal Glow Line on Top of Header --- */
+.service-text-block h3::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--brand-yellow);
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px var(--brand-yellow);
+}
+
+.service-text-block p {
+  font-size: 1.1rem;
+  color: var(--text-grey);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Feature List */
+.service-features {
+  list-style: none;
+  padding: 0;
+}
+.service-features li {
+  margin-bottom: 15px;
+  color: var(--text-white);
+  display: flex;
+  align-items: flex-start; /* Aligns icon to top of multiline text */
+  gap: 15px;
+  font-size: 1.05rem;
+}
+
+/* --- UPDATED: Reduced Icon Glow --- */
+.service-features li i {
+  color: var(--brand-yellow);
+  font-size: 1.1rem;
+  /* Removed the hard '1' opacity shadow for a softer glow */
+  text-shadow: 0 0 10px rgba(255, 216, 77, 0.4);
+  margin-top: 4px;
+}
+
+/* Image Block */
+.service-image-block {
+  flex: 1;
+  position: relative;
+}
+.image-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  backdrop-filter: blur(5px);
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  filter: contrast(1.1);
+}
+
+/* Deco Circles */
+.deco-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(40px);
+  opacity: 0.6;
+}
+.deco-circle.yellow {
+  background: var(--brand-yellow);
+  bottom: -40px;
+  right: -40px;
+}
+.deco-circle.blue {
+  background: var(--brand-blue);
+  top: -40px;
+  left: -40px;
+}
+
+/* =========================================================
+   3. PROCESS TIMELINE
+   ========================================================= */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  position: relative;
+}
+
+/* Connector Line (Desktop) */
+@media (min-width: 900px) {
+  .process-grid::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 216, 77, 0.3),
+      transparent
+    );
+    z-index: 0;
+  }
+}
+
+/* Steps */
+.process-step {
+  opacity: 0;
+  animation: fadeInUpSmooth 0.6s forwards;
+}
+.process-grid.active .process-step:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.process-grid.active .process-step:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.process-grid.active .process-step:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.process-grid.active .process-step:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.step-icon {
+  width: 90px;
+  height: 90px;
+  background: var(--bg-dark);
+  border: 1px solid var(--brand-yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+  color: var(--brand-yellow);
+  box-shadow: 0 0 20px rgba(255, 216, 77, 0.1);
+  transition: 0.3s;
+}
+.process-step:hover .step-icon {
+  background: var(--brand-yellow);
+  color: var(--bg-dark);
+  box-shadow: 0 0 40px rgba(255, 216, 77, 0.5);
+  transform: scale(1.1);
+}
+.process-step h4 {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   4. INVENTORY / EQUIPMENT
+   ========================================================= */
+.inventory-container {
+  background: rgba(10, 35, 57, 0.8);
+  border: 1px solid rgba(255, 216, 77, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  margin-top: 50px;
+  box-shadow: 0 20px 80px rgba(255, 216, 77, 0.15);
+}
+
+.inventory-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.06); /* Permanent Lit Style */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.inventory-row:last-child {
+  margin-bottom: 0;
+}
+.inventory-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--brand-yellow);
+  transform: translateY(-2px);
+}
+
+.inv-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(5, 20, 36, 0.5);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--brand-yellow);
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 216, 77, 0.3);
+}
+.inventory-row:hover .inv-icon {
+  background: var(--brand-yellow);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 216, 77, 0.6);
+}
+
+.inv-info {
+  flex-grow: 1;
+}
+.inv-info h3 {
+  color: var(--text-white);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--text-grey);
+  font-family: "Inter", "Roboto", sans-serif;
+}
+.inv-info p {
+  color: var(--text-grey);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.inv-brands {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 300px;
+}
+.brand-tag {
+  background: rgba(5, 20, 36, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.inventory-row:hover .brand-tag {
+  border-color: var(--brand-yellow);
+  color: var(--brand-yellow);
+}
+
+/* =========================================================
+   RESPONSIVE: MOBILE LAYOUTS
+   ========================================================= */
+
+/* --- TABLET & MOBILE HERO (767px down) --- */
+@media (max-width: 767px) {
+  /* Hero Font Adjustments Only (Sidebar removed) */
+  .page-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 0 15px;
+  }
+
+  .service-text-block p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+/* --- TABLET & MOBILE CONTENT (900px down) --- */
+@media (max-width: 900px) {
+  /* Stack Services & Inventory */
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .service-text-block p {
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: auto;
+    text-align: center;
+  }
+
+  /* Force Image to Top */
+  .service-image-block {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .service-text-block {
+    width: 100%;
+  }
+
+  /* Center the yellow line on mobile */
+  .service-text-block h3::before {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Center Lists visually but keep text left */
+  .service-features {
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* Inventory Stacking */
+  .inventory-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 25px;
+  }
+  .inv-brands {
+    width: 100%;
+    justify-content: center;
+  }
+  .inventory-container {
+    padding: 20px;
+  }
+}
+
+/* --- MOBILE S (Tiny Screens < 400px) --- */
+@media (max-width: 400px) {
+  .page-hero h1 {
+    font-size: 1.8rem !important;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  .page-hero {
+    padding-top: 100px;
+    height: auto;
+    min-height: 50vh;
+    padding-bottom: 40px;
+  }
+  .section-subtitle {
+    font-size: 0.8rem !important;
+  }
+}

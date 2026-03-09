@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="FirstSource Icon" />
+          <div>FirstSource <span>Solar</span></div>
+        </a>
+        <nav class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="services.html">What We Do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>
+              <a href="contact.html" style="color: var(--brand-yellow)"
+                >Connect</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </header>
+
+    <section class="contact-page-section">
+      <div class="container">
+        <div class="contact-split">
+          <div class="info-box reveal">
+            <h2>Let's Power Up.</h2>
+            <p
+              style="
+                margin-bottom: 40px;
+                color: var(--text-grey);
+                font-size: 1.1rem;
+                line-height: 1.6;
+              "
+            >
+              Ready to transition? Our engineers are ready to analyze your site
+              and provide a comprehensive proposal.
+            </p>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-text">
+                <h4>Visit Us</h4>
+                <p>
+                  D109, Level 1, Block D. Kelana Square. Jalan SS7/26. 47301
+                  Petaling Jaya, Selangor, Malaysia
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-text">
+                <h4>Call Us</h4>
+                <p>011-6169 7366 (Dr. John Zhang)</p>
+                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 5px">
+                  Mon-Fri, 9am - 6pm
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-text">
+                <h4>Email Us</h4>
+                john.z@fssolar.com.my</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-box reveal">
+            <form class="tech-form" action="process_contact.php" method="POST">
+              <div class="form-group">
+                <label class="form-label">Name / Company</label>
+                <input
+                  type="text"
+                  name="user_name"
+                  class="form-input"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  name="user_email"
+                  class="form-input"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+              <label class="form-label">Contact No.</label>
+              <input
+                type="tel"
+                name="user_contact"
+                class="form-input"
+                placeholder="e.g., +60 12-345 6789"
+                required
+              />
+            </div>
+              <div class="form-group">
+                <label class="form-label">Project Type</label>
+                <select name="project_type" class="form-input">
+                  <option value="Commercial">Commercial Rooftop</option>
+                  <option value="Industrial">Industrial Factory</option>
+                  <option value="Residential">Residential</option>
+                  <option value="LSS">Large Scale Solar (LSS)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea
+                  name="user_message"
+                  class="form-textarea"
+                  rows="5"
+                  placeholder="Tell us about your energy needs..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn" style="width: 100%">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="map-container reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Kelana%20Square%2C%20Jalan%20SS7%2F26%2C%2047301%20Petaling%20Jaya%2C%20Selangor&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="brand-text">FIRSTSOURCE <span>SOLAR</span></h4>
+            <p>
+              "Solar power is the last energy resource that isn't owned yet –
+              nobody taxes the sun yet." — Bonnie Raitt
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Connect</h4>
+
+            <div style="margin-bottom: 20px; line-height: 1.5">
+              <strong style="color: #ffffff; font-size: 1.05rem"
+                >FirstSource Solar Sdn Bhd</strong
+              >
+              <br />
+              <span style="font-size: 0.9rem; opacity: 0.6">(1665930-M)</span>
+            </div>
+
+            <ul class="contact-info">
+              <li>
+                <i
+                  class="fa-solid fa-building"
+                  style="color: #ffd84d; width: 25px; margin-top: 5px"
+                ></i>
+                <span>
+                  D109, Level 1, Block D. Kelana Square.<br />
+                  Jalan SS7/26. 47301 Petaling Jaya,<br />
+                  Selangor, Malaysia
+                </span>
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-phone"
+                  style="color: #ffd84d; width: 25px"
+                ></i>
+                011-6169 7366 (Dr. John Zhang)
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: #ffd84d; width: 25px"
+                ></i>
+                john.z@fssolar.com.my
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul class="contact-info" style="display: block">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Technology</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          style="
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+            padding-top: 30px;
+            text-align: center;
+          "
+        >
+          <div style="margin-bottom: 15px">
+            <a
+              href="privacy.html"
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: 0.3s;
+              "
+            >
+              Privacy Policy
+            </a>
+            <span style="color: rgba(255, 255, 255, 0.2)">|</span>
+            <a
+              href="terms.html"
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: 0.3s;
+              "
+            >
+              Terms & Conditions
+            </a>
+          </div>
+
+          <div
+            class="copyright"
+            style="font-size: 0.8rem; opacity: 0.6; border: none; padding: 0"
+          >
+            &copy; 2026 FirstSource Solar Sdn Bhd. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      footer a[href*="privacy"]:hover,
+      footer a[href*="terms"]:hover {
+        color: #ffd84d !important;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get("status");
+
+      // Define the common grid pattern style to reuse it
+      const gridStyle = {
+        backgroundImage:
+          "linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
+        backgroundSize: "50px 50px",
+        borderRadius: "25px",
+      };
+
+      if (status === "success") {
+        Swal.fire({
+          title: '<span style="color: #ffd84d">Message Sent!</span>',
+          text: "Your Email has been received. Thank you for reaching out to us. We will be in touch shortly.",
+          icon: "success",
+          background: "#0a2339",
+          color: "#ffffff",
+          confirmButtonColor: "#ffd84d",
+          confirmButtonText:
+            '<span style="color: #000; font-weight: bold;">Close</span>',
+          didOpen: (popup) => {
+            // 1. Apply the grid background and rounded corners
+            Object.assign(popup.style, gridStyle);
+
+            // 2. Add the yellow glow to the button
+            const confirmBtn = Swal.getConfirmButton();
+            if (confirmBtn) {
+              confirmBtn.style.boxShadow = "0 0 30px rgba(255, 216, 77, 0.6)";
+              confirmBtn.style.transition = "all 0.3s ease";
+            }
+          },
+        }).then(() => {
+          window.history.replaceState(null, null, window.location.pathname);
+        });
+      } else if (status === "error") {
+        Swal.fire({
+          title: '<span style="color: #d33">Sending Failed</span>',
+          text: "Something went wrong. Please try calling or email us directly.",
+          icon: "error",
+          background: "#0a2339",
+          color: "#ffffff",
+          confirmButtonColor: "#d33",
+          didOpen: (popup) => {
+            Object.assign(popup.style, gridStyle);
+            const confirmBtn = Swal.getConfirmButton();
+            if (confirmBtn) {
+              confirmBtn.style.boxShadow = "0 0 30px rgba(221, 51, 51, 0.6)";
+            }
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

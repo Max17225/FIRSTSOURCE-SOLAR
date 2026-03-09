@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="FirstSource Icon" />
+          <div>FirstSource <span>Solar</span></div>
+        </a>
+        <nav class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="services.html">What We Do</a></li>
+            <li>
+              <a href="portfolio.html" style="color: var(--brand-yellow)"
+                >Portfolio</a
+              >
+            </li>
+            <li><a href="contact.html">Connect</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="section-subtitle">Innovating Energy. Powering Futures.</p>
+        <h1>Our <br /><span class="text-blue">Portfolio</span></h1>
+      </div>
+    </section>
+
+    <section class="filter-section reveal">
+      <div class="container">
+        <div class="filter-bar">
+          <button
+            class="filter-btn active"
+            onclick="filterSelection('residential')"
+          >
+            Residential
+          </button>
+          <button class="filter-btn" onclick="filterSelection('commercial')">
+            Commercial & Industrial
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="residential" class="portfolio-tab-content active">
+      <div class="container">
+        <div class="tab-header reveal">
+          <h2>Residential Portfolio</h2>
+            <p class="heading-desc">
+              At <span class="brand-text-inline">FIRSTSOURCE <span>SOLAR</span></span>, we bring you more than just solar panels—we
+              deliver a state-of-the-art energy system designed for performance,
+              beauty, and long-term value.
+            </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="tier-1-tech.png" alt="Tier 1 Technology" />
+            </div>
+            <div class="card-body">
+              <h3>Tier 1 Solar Technology</h3>
+              <p>
+                Only the world’s most reliable and efficient panels and
+                inverters, ensuring maximum energy production and peace of mind
+                for decades.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-shield-halved"></i> Reliability
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-bolt"></i> Efficiency
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="cert-install.png" alt="Certified Installation" />
+            </div>
+            <div class="card-body">
+              <h3>Certified Precision Installation</h3>
+              <p>
+                Our SEDA, CIDB, TNB & MPSEA-compliant installers combine
+                engineering expertise with flawless craftsmanship. Every system
+                is optimised for your roof and your lifestyle.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-user-gear"></i> Expertise
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-check-double"></i> Compliant
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="seamless-process.png" alt="Seamless Process" />
+            </div>
+            <div class="card-body">
+              <h3>Seamless & Compliant Process</h3>
+              <p>
+                We handle everything—from design and approvals to grid
+                connection—so you enjoy a hassle-free transition to solar, fully
+                backed by Malaysia’s strictest industry standards.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-file-circle-check"></i> Approvals
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-handshake"></i> Hassle-Free
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="smart-energy.png" alt="Smart Energy" />
+            </div>
+            <div class="card-body">
+              <h3>Smart Energy Independence</h3>
+              <p>
+                Monitor and manage your energy in real-time. Save your
+                electricity bills, increase your home’s value, and take control
+                of your power.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i> Monitoring
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-chart-line"></i> Value
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-footer reveal">
+          <h3>Engineered for Excellence. Built for You.</h3>
+          <p>Ready for a smarter, sustainable home?</p>
+          <a href="contact.html" class="btn btn-glow"
+            >Get Your Personalised Solar Quote Today</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="commercial" class="portfolio-tab-content">
+      <div class="container">
+        <div class="tab-header reveal">
+          <h2>Commercial & Industrial</h2>
+            <p class="heading-desc">
+              <span class="brand-text-inline">FIRSTSOURCE <span>SOLAR</span></span> engineers long-term energy solutions for Malaysia’s commercial & industrial sector. We deliver premium, compliant solar systems designed to maximize ROI and ensure decades of reliable performance.
+            </p>
+        </div>
+
+        <h3 class="section-break-title reveal">
+          Why Choose FIRSTSOURCE <span>SOLAR</span>?
+        </h3>
+        <div class="portfolio-grid">
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="c&1-tier-1-tech.png"Tier 1 Technology" />
+            </div>
+            <div class="card-body">
+              <h3>Tier 1 Technology</h3>
+              <p>
+                High-efficiency panels & inverters with industry-leading
+                warranties.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-medal"></i> Warranty
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-solar-panel"></i> Efficiency
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="fully-compliant.png" alt="Fully Compliant" />
+            </div>
+            <div class="card-body">
+              <h3>Fully Compliant</h3>
+              <p>
+                Certified installations adhering to ST, SEDA, CIDB, TNB & MPIA
+                standards.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-file-signature"></i> SEDA/TNB
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-building-circle-check"></i> CIDB
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="precision-engineering.png" alt="Precision Engineering" />
+            </div>
+            <div class="card-body">
+              <h3>Precision Engineering</h3>
+              <p>
+                Custom-designed systems for optimal yield and seamless
+                integration.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-compass-drafting"></i> Design
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-arrow-up-right-dots"></i> Yield
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-img-placeholder">
+              <img src="end-to-end.png" alt="End-to-End Service" />
+            </div>
+            <div class="card-body">
+              <h3>End-to-End Service</h3>
+              <p>
+                From feasibility to aftercare, we manage your entire solar
+                journey.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="footer-icon">
+                <i class="fa-solid fa-list-check"></i> Management
+              </div>
+              <div class="footer-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i> O&M
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-break-title reveal" style="margin-top: 60px">
+          Flexible Options
+        </h3>
+        <div class="portfolio-grid two-column">
+          <div class="project-card highlight-card reveal">
+            <div class="card-body big-body">
+              <h3>
+                <i
+                  class="fa-solid fa-money-bill-1-wave"
+                  style="color: var(--brand-yellow); margin-right: 10px"
+                ></i>
+                Outright Purchase
+              </h3>
+              <p>
+                Maximize long-term savings and own your energy asset outright
+                from Day 1.
+              </p>
+            </div>
+          </div>
+          <div class="project-card highlight-card reveal">
+            <div class="card-body big-body">
+              <h3>
+                <i
+                  class="fa-solid fa-hand-holding-dollar"
+                  style="color: var(--brand-yellow); margin-right: 10px"
+                ></i>
+                Zero Capex by Investor
+              </h3>
+              <p>
+                No upfront cost; pay only for the clean power you use through a
+                Power Purchase Agreement (PPA) or leasing model.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-break-title reveal" style="margin-top: 60px">
+          Your Business Benefits
+        </h3>
+        <div class="portfolio-grid three-column">
+          <div class="project-card reveal">
+            <div class="card-img-placeholder short-placeholder">
+              <i
+                class="fa-solid fa-plug-circle-bolt fa-3x"
+                style="color: var(--brand-yellow)"
+              ></i>
+            </div>
+            <div class="card-body">
+              <p>Save electricity bills & lock in low energy costs</p>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="card-img-placeholder short-placeholder">
+              <i
+                class="fa-solid fa-leaf fa-3x"
+                style="color: var(--brand-yellow)"
+              ></i>
+            </div>
+            <div class="card-body">
+              <p>Meet ESG goals & boost sustainability</p>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="card-img-placeholder short-placeholder">
+              <i
+                class="fa-solid fa-sack-dollar fa-3x"
+                style="color: var(--brand-yellow)"
+              ></i>
+            </div>
+            <div class="card-body">
+              <p>Increase asset value with a revenue-generating upgrade</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-footer reveal">
+          <p style="margin-bottom: 20px; font-size: 1.1rem">
+            Built for the long term—we build partnerships, not just projects.
+          </p>
+          <h3>
+            Ready to transform your energy strategy with quality-driven solar?
+          </h3>
+          <a href="contact.html" class="btn btn-glow"
+            >Contact Us for Complimentary Consultation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="brand-text">FIRSTSOURCE <span>SOLAR</span></h4>
+            <p>
+              "Solar power is the last energy resource that isn't owned yet –
+              nobody taxes the sun yet." — Bonnie Raitt
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Connect</h4>
+
+            <div style="margin-bottom: 20px; line-height: 1.5">
+              <strong style="color: #ffffff; font-size: 1.05rem"
+                >FirstSource Solar Sdn Bhd</strong
+              >
+              <br />
+              <span style="font-size: 0.9rem; opacity: 0.6">(1665930-M)</span>
+            </div>
+
+            <ul class="contact-info">
+              <li>
+                <i
+                  class="fa-solid fa-building"
+                  style="color: #ffd84d; width: 25px; margin-top: 5px"
+                ></i>
+                <span>
+                  D109, Level 1, Block D. Kelana Square.<br />
+                  Jalan SS7/26. 47301 Petaling Jaya,<br />
+                  Selangor, Malaysia
+                </span>
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-phone"
+                  style="color: #ffd84d; width: 25px"
+                ></i>
+                011-6169 7366 (Dr. John Zhang)
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: #ffd84d; width: 25px"
+                ></i>
+                john.z@fssolar.com.my
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul class="contact-info" style="display: block">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Technology</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          style="
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+            padding-top: 30px;
+            text-align: center;
+          "
+        >
+          <div style="margin-bottom: 15px">
+            <a
+              href="privacy.html"
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: 0.3s;
+              "
+            >
+              Privacy Policy
+            </a>
+            <span style="color: rgba(255, 255, 255, 0.2)">|</span>
+            <a
+              href="terms.html"
+              style="
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: 0.3s;
+              "
+            >
+              Terms & Conditions
+            </a>
+          </div>
+
+          <div
+            class="copyright"
+            style="font-size: 0.8rem; opacity: 0.6; border: none; padding: 0"
+          >
+            &copy; 2026 FirstSource Solar Sdn Bhd. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      footer a[href*="privacy"]:hover,
+      footer a[href*="terms"]:hover {
+        color: #ffd84d !important;
+      }
+    </style>
+
+    <script>
+      function filterSelection(category) {
+        var contents = document.getElementsByClassName("portfolio-tab-content");
+        for (var i = 0; i < contents.length; i++) {
+          contents[i].style.display = "none";
+          contents[i].classList.remove("active");
+        }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].classList.remove("active");
+        }
+        document.getElementById(category).style.display = "block";
+        setTimeout(() => {
+          document.getElementById(category).classList.add("active");
+        }, 10);
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
